@@ -27,6 +27,7 @@ class BurgerIngridient extends Component {
         break;
         case('bacon'): 
             ingridient = <div className={classes.Bacon}></div>
+            break;
         default:
             ingridient = null;
     }
