@@ -1,5 +1,6 @@
 import React from 'react';
 import Auxilliary from '../../../hoc/Auxilliary';
+import Button from '../../UI/Button/Button'
 
 const orderSummary = (props) => {
     const ingridientsSummary = Object.keys(props.ingridients)
@@ -17,8 +18,8 @@ const orderSummary = (props) => {
             {ingridientsSummary}
         </ul>
         <p>Countinue to checkout ?</p>
-        <button>Cancel</button>
-        <button>Countinue</button>
+        <Button btnType='Danger' clicked={props.purchaseCancelled}>Cancel</Button>
+        <Button btnType='Success' clicked={props.purchaseCountinued}>Countinue</Button>
     </Auxilliary>
     )
 }
