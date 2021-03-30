@@ -1,6 +1,7 @@
 import React from 'react';
-import classes from './Burger.css'
-import BurgerIngridient from './BurgerIngridient/BurgerIngridient'
+import { withRouter } from 'react-router-dom';
+import classes from './Burger.css';
+import BurgerIngridient from './BurgerIngridient/BurgerIngridient';
 
 
 const burger = (props) => {
@@ -9,20 +10,22 @@ const burger = (props) => {
         return [...Array(props.ingridients[igKey])].map((_, i) => {
              return <BurgerIngridient key={igKey + i} type={igKey}/>
         })
-    })
+     })
     .reduce((arr, el) => {
         return arr.concat(el)
-    }, [])
+     }, []);
+    
     if(transformedIngridients.length === 0) {
         transformedIngridients = <p>Please start adding ingridients</p>
-    }
-    return(
+     };
+
+    return (
         <div className={classes.Burger}>
             <BurgerIngridient type="bread-top"/>
-         {transformedIngridients}
+                        {transformedIngridients}
             <BurgerIngridient type="bread-top"/>
         </div>
-    )
+     );
 }
 
-export default burger;
+export default withRouter(burger);

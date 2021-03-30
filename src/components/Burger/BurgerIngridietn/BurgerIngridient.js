@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import classes from './BurgerIngridient.css'
-import PropTypes from 'prop-types'
+import classes from './BurgerIngridient.css';
+import PropTypes from 'prop-types';
 
 class BurgerIngridient extends Component {
     render() {
@@ -12,9 +12,9 @@ class BurgerIngridient extends Component {
         break;
         case('bread-top'): 
             ingridient = <div className={classes.BreadTop}>
-                        <div className={classes.Seeds1}></div>
-                        <div className={classes.Seeds2}></div>
-                    </div>
+                            <div className={classes.Seeds1}></div>
+                            <div className={classes.Seeds2}></div>
+                        </div>
         break;
         case('meat'): 
             ingridient = <div className={classes.Meat}></div>

@@ -5,16 +5,16 @@ import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 import Checkout from './containers/Checkout/Checkout';
 
 class App extends Component {
-  render() {
-    return (
-      <div >
+   render() {
+     return (
+       <div >
         <Layout>
-          <Switch>
+           <Switch>
             <Route path='/checkout' component={Checkout}/>
             <Route path='/' exact component={BurgerBuilder}/>
-          </Switch>
-          </Layout>
-      </div>
+           </Switch>
+           </Layout>
+       </div>
     );
   }
 }
