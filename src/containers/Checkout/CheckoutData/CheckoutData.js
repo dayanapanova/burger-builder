@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Button from '../../../components/UI/Button/Button';
-import classes from './CheckoutData.css'
+import classes from './CheckoutData.css';
+import Input from '../../../components/Input/Input';
+
 
 class CheckoutData extends Component {
     state = {
@@ -17,10 +19,10 @@ class CheckoutData extends Component {
             <div className={classes.CheckoutData}>
                 <h4>Enter your contact data</h4>
                 <form>
-                    <input className={classes.Input} type='text' name='name' placeholder='Name'></input>
-                    <input className={classes.Input} type='email' name='email' placeholder='Email'></input>
-                    <input className={classes.Input} type='text' name='street' placeholder='Street'></input>
-                    <input className={classes.Input} type='text' name='postalCode' placeholder='PostalCode'></input>
+                    <Input inputtype='input' type='text' name='name' placeholder='Name'/>
+                    <Input inputtype='input' type='email' name='email' placeholder='Email'/>
+                    <Input inputtype='input' type='text' name='street' placeholder='Street'/>
+                    <Input inputtype='input' type='text' name='postalCode' placeholder='PostalCode'/>
                     <Button btnType='Success'>ORDER</Button>
                 </form>
             </div>
